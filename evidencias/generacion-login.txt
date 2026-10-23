@@ -1,0 +1,9 @@
+> ng.cmd generate page Login --project=app
+CREATE src/app/login/login-routing.module.ts (360 bytes)
+CREATE src/app/login/login.module.ts (490 bytes)
+CREATE src/app/login/login.page.html (313 bytes)
+CREATE src/app/login/login.page.spec.ts (456 bytes)
+CREATE src/app/login/login.page.ts (289 bytes)
+CREATE src/app/login/login.page.scss (0 bytes)
+UPDATE src/app/app-routing.module.ts (607 bytes)
+[OK] Generated page!

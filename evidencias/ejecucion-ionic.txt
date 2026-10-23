@@ -1,0 +1,56 @@
+> ng.cmd run app:serve --host=127.0.0.1 --port=8100
+[ng] > Building...
+[ng] √ Building...
+[ng] Initial chunk files                | Names                  |  Raw size
+[ng] chunk-MNEQ4GR7.js                  | -                      |   1.98 MB | 
+[ng] chunk-4ZU5RRJ4.js                  | -                      | 133.93 kB | 
+[ng] styles.css                         | styles                 |  56.92 kB | 
+[ng] chunk-4Z2FTPRM.js                  | -                      |  26.06 kB | 
+[ng] chunk-E3MZFQWI.js                  | -                      |  20.70 kB | 
+[ng] chunk-AS76NAFV.js                  | -                      |  19.20 kB | 
+[ng] chunk-FG63BTUX.js                  | -                      |  12.92 kB | 
+[ng] chunk-FI7RYZLW.js                  | -                      |  12.03 kB | 
+[ng] chunk-7VMG2CCD.js                  | -                      |   9.97 kB | 
+[ng] chunk-RNTMMJKP.js                  | -                      |   9.39 kB | 
+[ng] main.js                            | main                   |   9.04 kB | 
+[ng] chunk-7DSOGL33.js                  | -                      |   7.80 kB | 
+[ng] chunk-AGIVSK6C.js                  | -                      |   7.47 kB | 
+[ng] chunk-LXCR6C33.js                  | -                      |   6.85 kB | 
+[ng] chunk-XO4XYCJT.js                  | -                      |   5.02 kB | 
+[ng] chunk-HCYEB4TZ.js                  | -                      |   4.94 kB | 
+[ng] chunk-DB2SF6VX.js                  | -                      |   2.99 kB | 
+[ng] chunk-UGUZQALC.js                  | -                      |   2.19 kB | 
+[ng] chunk-JZMFGIPP.js                  | -                      |   1.93 kB | 
+[ng] chunk-BCFSMEOG.js                  | -                      |   1.66 kB | 
+[ng] chunk-UHZLJBYK.js                  | -                      |   1.33 kB | 
+[ng] chunk-QVWYUNKT.js                  | -                      |   1.17 kB | 
+[ng] chunk-EUU7EZS6.js                  | -                      | 634 bytes | 
+[ng] chunk-AWSGH3DX.js                  | -                      | 469 bytes | 
+[ng]                                    | Initial total          |   2.34 MB
+[ng] Lazy chunk files                   | Names                  |  Raw size
+[ng] ion-datetime.entry-277TJ3BH.js     | ion-datetime-entry     |  96.22 kB | 
+[ng] ion-modal.entry-KPN4HBQM.js        | ion-modal-entry        |  84.27 kB | 
+[ng] ion-select_3.entry-4Q4WX6XQ.js     | ion-select_3-entry     |  74.62 kB | 
+[ng] ion-item_8.entry-UJWOR7MF.js       | ion-item_8-entry       |  65.40 kB | 
+[ng] ion-app_8.entry-NX6BDWXI.js        | ion-app_8-entry        |  65.23 kB | 
+[ng] ion-alert.entry-5E5DXRNF.js        | ion-alert-entry        |  54.49 kB | 
+[ng] ion-textarea.entry-4EREGJHA.js     | ion-textarea-entry     |  53.12 kB | 
+[ng] ion-input.entry-BRVSKN75.js        | ion-input-entry        |  50.58 kB | 
+[ng] ion-popover.entry-AS5D7GL3.js      | ion-popover-entry      |  49.08 kB | 
+[ng] ion-range.entry-JUG4EBYI.js        | ion-range-entry        |  42.58 kB | 
+[ng] ion-action-sheet.entry-2K4GBZTJ.js | ion-action-sheet-entry |  40.49 kB | 
+[ng] ion-refresher_2.entry-AH7QSV4B.js  | ion-refresher_2-entry  |  38.69 kB | 
+[ng] ion-segment_2.entry-U5VPEYIR.js    | ion-segment_2-entry    |  38.05 kB | 
+[ng] ion-button_2.entry-AAJRWLAG.js     | ion-button_2-entry     |  35.75 kB | 
+[ng] ion-menu_3.entry-GSMANTND.js       | ion-menu_3-entry       |  32.78 kB | 
+[ng] ...and 72 more lazy chunks files. Use "--verbose" to show all the files.
+[ng] Application bundle generation complete. [66.618 seconds] - 2026-10-23T12:00:06.757Z
+[ng] NOTE: Raw file sizes do not reflect development server per-request transformations.
+
+[[40mINFO[49m] Development server running!
+       
+       Local: http://localhost:8100
+       
+       Use Ctrl+C to quit this process
+
+[ng]   ➜  Local:   http://127.0.0.1:8100/

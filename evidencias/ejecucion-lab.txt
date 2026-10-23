@@ -1,0 +1,7 @@
+
+> skeletonapp@0.0.1 lab
+> ionic-lab http://127.0.0.1:8100 --host=127.0.0.1 --port=8200 --project-type=angular --app-name=SkeletonAPP --app-version=0.0.1
+
+Ionic Lab running!
+Lab: http://127.0.0.1:8200
+App: http://127.0.0.1:8100

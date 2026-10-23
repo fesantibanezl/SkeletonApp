@@ -1,0 +1,21 @@
+.login-content {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+h1 {
+  max-width: 320px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  margin: 12px 0 24px;
+  color: var(--ion-color-medium-shade);
+}
