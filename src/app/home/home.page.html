@@ -1,21 +1,86 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      SkeletonAPP
-    </ion-title>
+    <ion-title>SkeletonAPP</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="leave()">Salir</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">SkeletonAPP</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <main class="home-content">
+    <header class="welcome">
+      <h1 #homeTitle>¡Bienvenido!</h1>
+      <p>Usuario: <strong>{{ username }}</strong></p>
+    </header>
 
-  <div id="container">
-    <strong>SkeletonAPP</strong>
-    <p>Programación de Aplicaciones Móviles</p>
-    <ion-button routerLink="/login">Abrir Login</ion-button>
-  </div>
+    <app-section-card heading="Información adicional">
+      <p class="app-description">Completa tus datos y comprueba cómo se muestra tu nombre.</p>
+
+      <form class="details-form" [formGroup]="details" (ngSubmit)="show()">
+        <ion-input
+          #firstNameInput
+          label="Nombre"
+          labelPlacement="stacked"
+          fill="outline"
+          placeholder="Ingresa tu nombre"
+          formControlName="firstName"
+          autocomplete="given-name"
+          errorText="Ingresa tu nombre."
+          required>
+        </ion-input>
+
+        <ion-input
+          #lastNameInput
+          label="Apellido"
+          labelPlacement="stacked"
+          fill="outline"
+          placeholder="Ingresa tu apellido"
+          formControlName="lastName"
+          autocomplete="family-name"
+          errorText="Ingresa tu apellido."
+          required>
+        </ion-input>
+
+        <ion-select
+          label="Nivel de educación"
+          labelPlacement="stacked"
+          fill="outline"
+          placeholder="Selecciona un nivel"
+          interface="popover"
+          formControlName="education">
+          @for (level of levels; track level) {
+            <ion-select-option [value]="level">{{ level }}</ion-select-option>
+          }
+        </ion-select>
+
+        <mat-form-field appearance="outline" subscriptSizing="dynamic">
+          <mat-label>Fecha de nacimiento</mat-label>
+          <input
+            matInput
+            readonly
+            [matDatepicker]="birthday"
+            [max]="today"
+            formControlName="birthDate">
+          <mat-datepicker-toggle matIconSuffix [for]="birthday"></mat-datepicker-toggle>
+          <mat-datepicker #birthday startView="multi-year" touchUi></mat-datepicker>
+        </mat-form-field>
+
+        <div class="actions">
+          <ion-button fill="outline" expand="block" type="button" (click)="clear()">Limpiar</ion-button>
+          <ion-button expand="block" type="submit">Mostrar</ion-button>
+        </div>
+      </form>
+    </app-section-card>
+
+    <p class="credit">App desarrollada por Felipe Santibañez</p>
+  </main>
+
+  <ion-alert
+    header="Usuario"
+    [isOpen]="!!summary"
+    [message]="summary"
+    [buttons]="alertButtons"
+    (didDismiss)="summary = ''">
+  </ion-alert>
 </ion-content>

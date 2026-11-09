@@ -1,21 +1,39 @@
 .login-content {
-  display: flex;
+  display: grid;
   min-height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 24px;
+  place-items: center;
+  padding: calc(1.5rem + var(--ion-safe-area-top, 0px)) 1rem
+    calc(1.5rem + var(--ion-safe-area-bottom, 0px));
+  background: radial-gradient(ellipse at top, #dce6ff 0, transparent 55%), var(--app-bg);
+}
+
+.login-panel { width: min(100%, 28rem); }
+
+.app-intro {
+  margin-bottom: 1.375rem;
   text-align: center;
 }
 
-h1 {
-  max-width: 320px;
-  margin: 0;
-  font-size: 24px;
-  font-weight: 600;
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: .875rem;
+  background: var(--ion-color-primary);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 780;
+  box-shadow: 0 8px 18px rgb(40 70 157 / 25%);
 }
 
-p {
-  margin: 12px 0 24px;
-  color: var(--ion-color-medium-shade);
+.app-intro h1 {
+  margin: .625rem 0 .125rem;
+  font-size: clamp(1.75rem, 7vw, 2.25rem);
+  font-weight: 780;
+  letter-spacing: -.045em;
 }
+
+.app-intro p { margin: 0; color: var(--app-muted); }
+.login-form { display: grid; gap: 1rem; }
+.submit-button { margin: .25rem 0 0; }

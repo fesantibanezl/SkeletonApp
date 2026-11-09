@@ -1,16 +1,50 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home" text="Volver"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
+<ion-content>
   <main class="login-content">
-    <h1>Bienvenido a SkeletonAPP</h1>
-    <p>Página de inicio de sesión</p>
-    <ion-button routerLink="/home" fill="outline">Volver al inicio</ion-button>
+    <div class="login-panel">
+      <header class="app-intro">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <h1>SkeletonAPP</h1>
+        <p>Aquí comienza todo</p>
+      </header>
+
+      <app-section-card heading="¡Bienvenido!">
+        <p class="app-description">Ingresa tu usuario y un PIN de cuatro dígitos.</p>
+
+        <form class="login-form" [formGroup]="credentials" (ngSubmit)="enter()">
+          <ion-input
+            label="Usuario"
+            labelPlacement="stacked"
+            fill="outline"
+            formControlName="username"
+            autocomplete="username"
+            autocapitalize="off"
+            [spellcheck]="false"
+            helperText="Entre 3 y 8 letras o números."
+            errorText="Usa entre 3 y 8 letras o números."
+            required>
+          </ion-input>
+
+          <ion-input
+            label="Contraseña (PIN)"
+            labelPlacement="stacked"
+            fill="outline"
+            formControlName="pin"
+            type="password"
+            inputmode="numeric"
+            autocomplete="off"
+            helperText="Exactamente 4 dígitos."
+            errorText="Ingresa exactamente 4 dígitos numéricos."
+            required>
+          </ion-input>
+
+          @if (navigationError) {
+            <p class="form-error" role="alert">No se pudo abrir Inicio. Inténtalo de nuevo.</p>
+          }
+          <ion-button class="submit-button" expand="block" type="submit" [disabled]="navigating">
+            Ingresar
+          </ion-button>
+        </form>
+      </app-section-card>
+    </div>
   </main>
 </ion-content>
